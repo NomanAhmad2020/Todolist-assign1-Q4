@@ -35,6 +35,7 @@ const Todo = () => {
                 <button onClick={() => handleTodo(inputData)}>
                     Add Todo
                 </button>
+                
                 <br/>
                 <button onClick={()=> dispatch(deleteAll())}>
                     Delete All

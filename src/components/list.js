@@ -29,11 +29,14 @@ const List = ({ data }) => {
         <div>
             <div>
                 {data.title}
+
+                
+
                 <button onClick={() => dispatch(deleteTodo(data.id))}>
                     Delete
                 </button>
                 <button onClick={() => setEditState(!editState)}>
-                    edit
+                   Edit
                 </button>
                 {
                     editState ?
@@ -46,6 +49,7 @@ const List = ({ data }) => {
                         </>
                         : ""
                 }
+                <input type="checkbox" label='isdone' />
             </div>
         </div>
     )
