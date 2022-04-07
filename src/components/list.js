@@ -7,14 +7,15 @@ const List = ({ data }) => {
     const [inputData, setInputData] = useState();
     const [editState, setEditState] = useState(false);
 
-    console.log("data", data)
+    console.log("data-list.js", data)
 
     const handleEdit = (task) => {
         try {
             if (!task) throw "Empty Field"
             const payload = {
                 title: task,
-                id: data.id
+                id: data.id,
+                isdone: false
             }
             const action = editTodo(payload);
             dispatch(action);
@@ -29,9 +30,7 @@ const List = ({ data }) => {
         <div>
             <div>
                 {data.title}
-
-                
-
+ 
                 <button onClick={() => dispatch(deleteTodo(data.id))}>
                     Delete
                 </button>
@@ -49,7 +48,7 @@ const List = ({ data }) => {
                         </>
                         : ""
                 }
-                <input type="checkbox" label='isdone' />
+                <input type="checkbox" label='isdone' checked={data.isdone} />
             </div>
         </div>
     )

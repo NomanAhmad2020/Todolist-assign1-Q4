@@ -17,7 +17,8 @@ const Todo = () => {
             if (!task) throw "Empty Field"
             const payload = {
                 title: task,
-                id: uuid()
+                id: uuid(),
+                isdone: false
             }
             const action = addTodo(payload);
             dispatch(action);
@@ -44,6 +45,7 @@ const Todo = () => {
             {
                 list.map((item) => {
                     return (
+                        
                         <List data={item} />
                     )
                 })

@@ -2,7 +2,8 @@ export const addTodo = ({ title, id }) => ({
   type: "ADD_TODO",
   payload: {
       title,
-      id
+      id,
+      isdone
   }
 })
 
@@ -22,6 +23,7 @@ export const editTodo = ({ title, id }) => ({
   type: "EDIT_TODO",
   payload: {
       title,
-      id
+      id,
+      isdone
   }
 })

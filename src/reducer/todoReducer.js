@@ -2,7 +2,8 @@ const initialState = {
   todoList: [
       {
           title: 'Task One',
-          id: "1"
+          id: "1",
+          isdone: false
       }
   ]
 
