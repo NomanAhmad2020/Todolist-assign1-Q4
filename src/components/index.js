@@ -45,8 +45,10 @@ const Todo = () => {
             {
                 list.map((item) => {
                     return (
-                        
+                        <div>
+                        ponka
                         <List data={item} />
+                        </div>
                     )
                 })
             }
