@@ -25,7 +25,9 @@ const List = ({ data }) => {
         catch (error) {
             console.log("error", error)
         }
+    
     }
+    //const handleIsDone =(task) => 
     return (
         <div>
             <div>
@@ -48,7 +50,9 @@ const List = ({ data }) => {
                         </>
                         : ""
                 }
-                <input type="checkbox" label='isdone' checked={data.isdone} />
+                {/* //{ <i> status:{data.isdone}</i> } */}
+                {/* <input type="checkbox" label='isdone' checked={data.isdone} /> */}
+                {/* <button onClick={() => handleIsDone(inputData)}> Done </button> */}
             </div>
         </div>
     )

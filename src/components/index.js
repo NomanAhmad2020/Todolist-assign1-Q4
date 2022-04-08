@@ -10,6 +10,7 @@ const Todo = () => {
 
     const list = useSelector((val) => {
         return val.todoReducer.todoList
+       
     })
     const dispatch = useDispatch();
     const handleTodo = (task) => {
@@ -46,7 +47,7 @@ const Todo = () => {
                 list.map((item) => {
                     return (
                         <div>
-                        ponka
+                        {/* ponka */}
                         <List data={item} />
                         </div>
                     )

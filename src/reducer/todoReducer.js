@@ -4,7 +4,17 @@ const initialState = {
           title: 'Task One',
           id: "1",
           isdone: false
-      }
+      },
+      {
+        title: 'Task two',
+        id: "2",
+        isdone: true
+    },
+    {
+        title: 'Task three',
+        id: "3",
+        isdone: false
+    }
   ]
 
 }
@@ -14,7 +24,9 @@ const todoReducer = (state = initialState, action) => {
           return {
               ...state,
               todoList: [...state.todoList, action?.payload]
+              
           }
+         
       }
       case "DELETE_TODO": {
           return {
