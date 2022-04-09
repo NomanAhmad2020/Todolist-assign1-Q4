@@ -1,9 +1,9 @@
-export const addTodo = ({ title, id }) => ({
+export const addTodo = ({ title, id,isdone }) => ({
   type: "ADD_TODO",
   payload: {
       title,
       id,
-      
+      isdone,
   }
 })
 

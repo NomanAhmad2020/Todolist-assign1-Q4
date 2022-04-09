@@ -11,7 +11,7 @@ const List = ({ data }) => {
     
 
 
-    const [toggle,setToggle] = useState(false);
+    //const [toggle,setToggle] = useState(false);
 
 
     console.log("data-list.js", data)
@@ -58,8 +58,8 @@ const List = ({ data }) => {
                         : ""
                 }
                 
-                
-                 <input type="checkbox" onChange= {handleCheck} checked={data.isdone} /> 
+                 Completed?
+                 <input type="checkbox" onChange= {handleCheck} checked={data.isdone}/> 
                 
                  {/* <input type="checkbox" onClick= {() => setToggle(!toggle)} checked={data.isdone} />  */}
                

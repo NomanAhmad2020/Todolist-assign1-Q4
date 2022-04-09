@@ -12,42 +12,50 @@ const todoReducer = (state = initialState, action) => {
   switch (action.type) {
       case "ADD_TODO": {
           return {
-              ...state,
-              todoList: [...state.todoList, action?.payload]
+            
+            ...state,
+            todoList: [
+                ...state.todoList,
+                {
+                    id: action.payload.id,
+                    title: action.payload.title,
+                    isdone: false
+                }
+            ]
+
+            // ...state,
+            //   todoList: [...state.todoList, action?.payload]
+        }
+
+
               
-          }
+          
          
       }
+
       case "DELETE_TODO": {
           return {
               ...state,
-              todoList: state.todoList.filter((item) => item.id !== action.payload.id)
+              todoList: state.todoList.filter( (item) => item.id !== action.payload.id)
           }
       }
       
       case "SORT_TODO_STATUS":{
           return {
+                   
             ...state,
              todoList: state.todoList.filter((item) => item.isdone == true )
             
           }
 
       }
-      case "SORT_TODO_STATUS_ALL":{
-        return {
+      case "SORT_TODO_STATUS_ALL": {
+            return {
             ...state,
-            //todoList: state.todoList.sort(isdone)
-            //        todoList: state.todoList.sort() (function(x,y){return (x===y)? 0 : x? -1 : 1;})
-            //...state, 
-           //todoList: state.todoList(item)
-            
-        }
-
+            ...state.todoList,
+       
+         }  
     }
-
-
-
-
 
       case "CHANGE_TODO_STATUS": {
         return {
@@ -63,12 +71,11 @@ const todoReducer = (state = initialState, action) => {
                 }
             })
         }
-
-
       }
-
-        
+     
       
+
+
       case "EDIT_TODO": {
           return {
               ...state,
