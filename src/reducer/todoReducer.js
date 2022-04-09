@@ -33,6 +33,21 @@ const todoReducer = (state = initialState, action) => {
           }
 
       }
+      case "SORT_TODO_STATUS_ALL":{
+        return {
+            ...state,
+            //todoList: state.todoList.sort(isdone)
+            //        todoList: state.todoList.sort() (function(x,y){return (x===y)? 0 : x? -1 : 1;})
+            //...state, 
+           //todoList: state.todoList(item)
+            
+        }
+
+    }
+
+
+
+
 
       case "CHANGE_TODO_STATUS": {
         return {
