@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { deleteTodo, editTodo } from '../actions';
+import { deleteTodo, editTodo,changeTodoStatus } from '../actions';
 import { useDispatch } from 'react-redux'
 
 const List = ({ data }) => {
@@ -7,6 +7,8 @@ const List = ({ data }) => {
     const [inputData, setInputData] = useState();
     const [editState, setEditState] = useState(false);
 
+    const [checked,isChecked] = useState(false);
+    
     console.log("data-list.js", data)
 
     const handleEdit = (task) => {
@@ -27,7 +29,7 @@ const List = ({ data }) => {
         }
     
     }
-    //const handleIsDone =(task) => 
+    const handleCheck =() => dispatch(changeTodoStatus(data.id))
     return (
         <div>
             <div>
@@ -51,7 +53,7 @@ const List = ({ data }) => {
                         : ""
                 }
                 {/* //{ <i> status:{data.isdone}</i> } */}
-                {/* <input type="checkbox" label='isdone' checked={data.isdone} /> */}
+                 <input type="checkbox" onChange= {handleCheck} checked={data.isdone} /> 
                 {/* <button onClick={() => handleIsDone(inputData)}> Done </button> */}
             </div>
         </div>

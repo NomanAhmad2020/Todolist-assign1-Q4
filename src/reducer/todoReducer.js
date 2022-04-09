@@ -34,6 +34,29 @@ const todoReducer = (state = initialState, action) => {
               todoList: state.todoList.filter((item) => item.id !== action.payload.id)
           }
       }
+      case "CHANGE_TODO_STATUS":{
+        return {
+            ...state,
+            todoList: state.todoList.map((item) => {
+                if (item.id == action.payload.id) {
+                    return {
+                        ...item, isdone: !action.payload.isdone
+                    }
+                }
+                else {
+                    return item;
+                }
+            })
+        }
+
+
+      }
+
+        //   const {id} = action.payload;
+        //   const todoList = state.todoList.map(item => {
+        //         if(item.id === id
+        //   }
+      
       case "EDIT_TODO": {
           return {
               ...state,

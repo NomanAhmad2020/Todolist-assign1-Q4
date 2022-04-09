@@ -18,6 +18,13 @@ export const deleteAll = () => ({
   type: "DELETE_ALL_TODO"
 })
 
+export const changeTodoStatus = id => ({
+    type: "CHANGE_TODO_STATUS",
+    payload: {id}
+
+
+});
+
 
 export const editTodo = ({ title, id }) => ({
   type: "EDIT_TODO",

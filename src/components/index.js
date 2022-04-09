@@ -33,6 +33,7 @@ const Todo = () => {
         return (
         <div>
             <div>
+                
                 <input value={inputData} onChange={(e) => setInputData(e.target.value)} />
                 <button onClick={() => handleTodo(inputData)}>
                     Add Todo
