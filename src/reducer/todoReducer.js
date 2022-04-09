@@ -4,18 +4,8 @@ const initialState = {
           title: 'Task One',
           id: "1",
           isdone: false
-      },
-      {
-        title: 'Task two',
-        id: "2",
-        isdone: true
-    },
-    {
-        title: 'Task three',
-        id: "3",
-        isdone: false
-    }
-  ]
+      }
+        ]
 
 }
 const todoReducer = (state = initialState, action) => {
@@ -34,13 +24,13 @@ const todoReducer = (state = initialState, action) => {
               todoList: state.todoList.filter((item) => item.id !== action.payload.id)
           }
       }
-      case "CHANGE_TODO_STATUS":{
+      case "CHANGE_TODO_STATUS": {
         return {
             ...state,
             todoList: state.todoList.map((item) => {
                 if (item.id == action.payload.id) {
                     return {
-                        ...item, isdone: !action.payload.isdone
+                        ...item, isdone: !item.isdone 
                     }
                 }
                 else {

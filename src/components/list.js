@@ -9,6 +9,11 @@ const List = ({ data }) => {
 
     const [checked,isChecked] = useState(false);
     
+
+
+    const [toggle,setToggle] = useState(false);
+
+
     console.log("data-list.js", data)
 
     const handleEdit = (task) => {
@@ -52,9 +57,13 @@ const List = ({ data }) => {
                         </>
                         : ""
                 }
-                {/* //{ <i> status:{data.isdone}</i> } */}
+                
+                
                  <input type="checkbox" onChange= {handleCheck} checked={data.isdone} /> 
-                {/* <button onClick={() => handleIsDone(inputData)}> Done </button> */}
+                
+                 {/* <input type="checkbox" onClick= {() => setToggle(!toggle)} checked={data.isdone} />  */}
+               
+                
             </div>
         </div>
     )
