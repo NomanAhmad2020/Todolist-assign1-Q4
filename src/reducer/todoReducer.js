@@ -23,13 +23,8 @@ const todoReducer = (state = initialState, action) => {
                 }
             ]
 
-            // ...state,
-            //   todoList: [...state.todoList, action?.payload]
+            
         }
-
-
-              
-          
          
       }
 
