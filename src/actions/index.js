@@ -3,7 +3,7 @@ export const addTodo = ({ title, id }) => ({
   payload: {
       title,
       id,
-      //isdone
+      
   }
 })
 
@@ -31,6 +31,6 @@ export const editTodo = ({ title, id }) => ({
   payload: {
       title,
       id,
-      //isdone
+      
   }
 })
