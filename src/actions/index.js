@@ -25,6 +25,11 @@ export const changeTodoStatus = id => ({
 
 });
 
+export const sort_todo = () => ({
+  type: "SORT_TODO_STATUS"
+
+})
+
 
 export const editTodo = ({ title, id }) => ({
   type: "EDIT_TODO",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addTodo, deleteAll } from '../actions';
+import { addTodo, deleteAll,sort_todo } from '../actions';
 import List from './list'
 import { v4 as uuid } from 'uuid';
 
@@ -43,6 +43,7 @@ const Todo = () => {
                 <button onClick={()=> dispatch(deleteAll())}>
                     Delete All
                 </button>
+                <button onClick={()=> dispatch(sort_todo())}>Sort by Status </button>
             </div>
             {
                 list.map((item) => {

@@ -24,6 +24,16 @@ const todoReducer = (state = initialState, action) => {
               todoList: state.todoList.filter((item) => item.id !== action.payload.id)
           }
       }
+      
+      case "SORT_TODO_STATUS":{
+          return {
+            ...state,
+             todoList: state.todoList.filter((item) => item.isdone == true )
+            
+          }
+
+      }
+
       case "CHANGE_TODO_STATUS": {
         return {
             ...state,
